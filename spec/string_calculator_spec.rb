@@ -54,6 +54,17 @@ RSpec.describe "String calculator" do
 			"//;\n1;2".should add_to(3)
 		end
 	end
+
+	#Task-5 : Calling add with a negative number will throw an exception
+	context "negative numbers" do
+		it "raise exception for negative numbers" do 
+			lambda {"-1".extend(StringCalculator).add}.should raise_error
+		end
+
+		it "multiple negative numbers" do
+			lambda {"-1,50,-65".extend(StringCalculator).add}.should raise_error
+		end
+	end
 	
 
 end
