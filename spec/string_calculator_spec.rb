@@ -47,6 +47,13 @@ RSpec.describe "String calculator" do
 			"1\n2,3".should add_to(6)
 		end
 	end
+
+	#Task-4 : Support different delimiters
+	context "support different delimiters" do
+		it "different delimiters" do 
+			"//;\n1;2".should add_to(3)
+		end
+	end
 	
 
 end
