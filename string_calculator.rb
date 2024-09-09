@@ -5,6 +5,6 @@ module StringCalculator
 	end
 
 	def digits
-		split(',').map {|x| x.to_i}
+		gsub("\n", ',').split(',').map {|x| x.to_i}
 	end
 end

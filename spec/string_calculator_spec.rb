@@ -40,6 +40,13 @@ RSpec.describe "String calculator" do
 			"15,5,30,40,10".should add_to(100)
 		end
 	end
+
+	#Task-3 : Allow the add method to handle new lines between numbers (instead of commas). ("1\n2,3" should return 6)
+	context "new lines between numbers" do
+		it "support new line" do 
+			"1\n2,3".should add_to(6)
+		end
+	end
 	
 
 end
