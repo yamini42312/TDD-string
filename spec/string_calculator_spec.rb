@@ -11,6 +11,8 @@ RSpec::Matchers.define :add_to do |expected|
 end
 
 RSpec.describe "String calculator" do
+
+	#Task-1 : String calculator with a add method which take inputs "", "1", "1,5" and returns output 0,1,6
 	it "returns 0 for empty string" do
 		"".should add_to(0)
 	end
@@ -27,5 +29,17 @@ RSpec.describe "String calculator" do
 			"1,5".should add_to(6)
 		end
 	end
+
+	#Task-2 : Allow the add method to handle any amount of numbers.
+	context "n numbers" do
+		it "returns 100 for 20,30,40,10" do
+			"20,30,40,10".should add_to(100)
+		end
+
+		it "returns 100 for 15,5,30,40,10" do
+			"15,5,30,40,10".should add_to(100)
+		end
+	end
+	
 
 end
